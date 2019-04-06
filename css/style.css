@@ -1,0 +1,23 @@
+/* Stylesheet by Chenxiao (Atlas) Guo, 2019 */
+
+.countries {
+    fill: none;
+    stroke: #CCC;
+    stroke-width: 2px;
+}
+
+.gratLines {
+    fill: none;
+    stroke: #999;
+    stroke-width: 1;
+    stroke-dasharray: 1,2;
+}
+
+.gratBackground {
+    fill: #D5E3FF;
+}
+
+.map {
+    border: medium solid #999;
+    fill: #8899DD
+}
