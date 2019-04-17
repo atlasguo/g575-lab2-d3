@@ -41,10 +41,10 @@
 			
 		//create projection
 		var projection = d3.geoAlbers()
-			.center([0, 38])
-			.rotate([98, 0])
+			.center([0, 39])
+			.rotate([97, 0])
 			.parallels([37.00, 45.5])
-			.scale(930)
+			.scale(880)
 			.translate([width / 2, height / 2]);
 
 		var path = d3.geoPath()
@@ -81,7 +81,7 @@
 			usa_state = joinData(usa_state, csvData);
 			
 			//create the color scale
-			var colorScale = makeColorScale(csvData);
+			var colorScale = makeColorScale(csvData,expressed);
 
 			//add enumeration units to the map
 			setEnumerationUnits(usa_state, map, path, colorScale);
@@ -155,8 +155,7 @@
 			.attr("d", path)
 			.style("fill", function(d){
 				return choropleth(d.properties, colorScale);
-			});
-			/*
+			})
 			//regions event listeners
 			.on("mouseover", function(d){
 				highlight(d.properties);
@@ -165,25 +164,38 @@
             dehighlight(d.properties);
 			})
 			.on("mousemove", moveLabel);
-			*/
+			
 			
 		//add style descriptor to each path
 		var desc = regions.append("desc")
-			.text('{"stroke": "#000", "stroke-width": "0.5px"}');
+			.text('{"stroke": "#666", "stroke-width": "0.5px"}');
 			
 		
 	}; //end of setEnumerationUnits()
 	
 	//function to create color scale generator
-	function makeColorScale(data){
-		var colorClasses = [
-			"#D4B9DA",
-			"#C994C7",
-			"#DF65B0",
-			"#DD1C77",
-			"#980043"
-		];
-
+	function makeColorScale(data,expressed){
+		if (expressed.charAt(0)=="O")
+		{
+			var colorClasses = [
+				"#fef0d9",
+				"#fdcc8a",
+				"#fc8d59",
+				"#e34a33",
+				"#b30000"
+			]
+		} 
+		else
+		{
+			var colorClasses = [
+				"#f1eef6",
+				"#bdc9e1",
+				"#74a9cf",
+				"#2b8cbe",
+				"#045a8d"
+			];
+		}
+		
 		//create color scale generator
 		var colorScale = d3.scaleThreshold()
 			.range(colorClasses);
@@ -202,12 +214,13 @@
 		domainArray = clusters.map(function(d){
 			return d3.min(d);
 		});
+		
 		//remove first value from domain array to create class breakpoints
 		domainArray.shift();
 
 		//assign array of last 4 cluster minimums as domain
 		colorScale.domain(domainArray);
-
+		
 		return colorScale;
 	};
 	
@@ -220,7 +233,7 @@
 		if (typeof val == 'number' && !isNaN(val)){
 			return colorScale(val);
 		} else {
-			return "#CCC";
+			return "#666";
 		};
 	};
 	
@@ -266,43 +279,15 @@
 			.attr("class", function(d){
 				return "bar " + d.GEOID;
 			})
-			.attr("width", chartInnerWidth / csvData.length - 1);
+			.attr("width", chartInnerWidth / csvData.length - 1)
 			//bars event listeners
-			//.on("mouseover", highlight)
-			//.on("mouseout", dehighlight)
-			//.on("mousemove", moveLabel);	
+			.on("mouseover", highlight)
+			.on("mouseout", dehighlight)
+			.on("mousemove", moveLabel);	
 		
 		//add style descriptor to each rect
 		var desc = bars.append("desc")
-			.text('{"stroke": "none", "stroke-width": "0px"}');
-
-/*
-		//set bars for each province
-		var bars = chart.selectAll(".bar")
-			.data(csvData)
-			.enter()
-			.append("rect")
-			.sort(function(a, b){
-				return b[expressed]-a[expressed]
-				
-			})
-			.attr("class", function(d){
-				return "bar " + d.GEOID;
-			})
-			.attr("width", chartInnerWidth / csvData.length - 1)
-			.attr("x", function(d, i){
-				return i * (chartInnerWidth / csvData.length) + leftPadding;
-			})
-			.attr("height", function(d, i){
-				return 463 - yScale(parseFloat(d[expressed]));
-			})
-			.attr("y", function(d, i){
-				return yScale(parseFloat(d[expressed])) + topBottomPadding;
-			})
-			.style("fill", function(d){
-				return choropleth(d, colorScale);
-			});
-*/
+			.text('{"stroke": "none", "stroke-width": "1px"}');
 
 		//create a text element for the chart title
 		var chartTitle = chart.append("text")
@@ -364,36 +349,13 @@
 		expressed = attribute;
 
 		//recreate the color scale
-		var colorScale = makeColorScale(csvData);
+		var colorScale = makeColorScale(csvData,expressed);
 
 		//recolor enumeration units
 		var regions = d3.selectAll(".regions")
 			.style("fill", function(d){
 				return choropleth(d.properties, colorScale)
 			});
-			
-		/*
-		//re-sort, resize, and recolor bars
-		var bars = d3.selectAll(".bar")
-			//re-sort bars
-			.sort(function(a, b){
-				return b[expressed] - a[expressed];
-			})
-			.attr("x", function(d, i){
-				return i * (chartInnerWidth / csvData.length) + leftPadding;
-			})
-			//resize bars
-			.attr("height", function(d, i){
-				return 463 - yScale(parseFloat(d[expressed]));
-			})
-			.attr("y", function(d, i){
-				return yScale(parseFloat(d[expressed])) + topBottomPadding;
-			})
-			//recolor bars
-			.style("fill", function(d){
-				return choropleth(d, colorScale);
-			});	
-		*/
 				
 		//re-sort, resize, and recolor bars
 		var bars = d3.selectAll(".bar")
@@ -434,15 +396,16 @@
 		
 	}; //end of updateChart()
 	
-	/*
+	
 	//function to highlight enumeration units and bars
 	function highlight(props){
+
 		//change stroke
 		var selected = d3.selectAll("." + props.GEOID)
-			.style("stroke", "blue")
+			.style("stroke", "black")
 			.style("stroke-width", "2");
 		
-		setLabel();
+		setLabel(props);
 	};
 	
 	//function to reset the element style on mouseout
@@ -464,6 +427,10 @@
 
 			return styleObject[styleName];
 		};
+		
+		//remove info label
+		d3.select(".infolabel")
+			.remove();
 	};
 	
 	//function to create dynamic label
@@ -482,10 +449,6 @@
 		var regionName = infolabel.append("div")
 			.attr("class", "labelname")
 			.html(props.name);
-		
-		//remove info label
-		d3.select(".infolabel")
-        .remove();
 		
 	};
 	
@@ -512,6 +475,6 @@
 			.style("left", x + "px")
 			.style("top", y + "px");
 	};
-	*/
+	
 		
 })();

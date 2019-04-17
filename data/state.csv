@@ -1,57 +1,57 @@
 GEOID,state,code,Origin at Stage 1,Origin at Stage 2,Origin at Stage 3,Origin at Stage 4,Destination at Stage 1,Destination at Stage 2,Destination at Stage 3,Destination at Stage 4
-1,Alabama,AL,4,1,1,1,0,2,2,3
-2,Alaska,AK,0,0,0,0,0,0,0,0
-60,American Samoa,AS,0,0,0,0,0,0,0,0
-4,Arizona,AZ,3,2,2,4,2,0,0,2
-5,Arkansas,AR,1,0,0,1,0,1,1,4
-6,California,CA,21,14,14,13,13,10,10,31
-8,Colorado,CO,9,5,5,6,9,1,1,6
-69,Commonwealth of the Northern Mariana Islands,MP,0,0,0,0,0,0,0,0
-9,Connecticut,CT,1,2,2,0,1,3,3,2
-10,Delaware,DE,0,0,0,0,0,0,0,0
-11,District of Columbia,DC,1,2,2,1,2,2,2,0
-12,Florida,FL,7,16,16,11,6,2,2,27
-13,Georgia,GA,9,7,7,6,7,3,3,9
-66,Guam,GU,0,0,0,0,0,0,0,0
-15,Hawaii,HI,4,0,0,0,1,0,0,0
-16,Idaho,ID,1,1,1,1,1,0,0,1
-17,Illinois,IL,11,7,7,6,12,7,7,6
-18,Indiana,IN,2,2,2,0,2,3,3,1
-19,Iowa,IA,2,0,0,0,2,0,0,0
-20,Kansas,KS,3,1,1,3,2,0,0,3
-21,Kentucky,KY,0,0,0,0,0,0,0,0
-22,Louisiana,LA,9,4,4,7,8,1,1,11
-23,Maine,ME,0,1,1,0,0,0,0,1
-24,Maryland,MD,2,1,1,2,2,3,3,5
-25,Massachusetts,MA,4,1,1,0,2,2,2,1
-26,Michigan,MI,1,3,3,0,1,0,0,0
-27,Minnesota,MN,0,1,1,0,1,0,0,0
-28,Mississippi,MS,0,0,0,0,0,0,0,0
-29,Missouri,MO,0,3,3,1,3,1,1,2
-30,Montana,MT,1,0,0,0,0,0,0,0
-31,Nebraska,NE,1,2,2,0,1,1,1,1
-32,Nevada,NV,7,2,2,4,8,4,4,5
-33,New Hampshire,NH,0,0,0,0,0,0,0,0
-34,New Jersey,NJ,2,0,0,3,0,0,0,4
-35,New Mexico,NM,1,2,2,1,1,1,1,1
-36,New York,NY,10,16,16,12,12,5,5,25
-37,North Carolina,NC,2,1,1,1,0,0,0,0
-38,North Dakota,ND,0,0,0,0,0,0,0,0
-39,Ohio,OH,4,1,1,1,1,2,2,1
-40,Oklahoma,OK,3,3,3,4,2,0,0,5
-41,Oregon,OR,1,0,0,0,2,0,0,0
-42,Pennsylvania,PA,2,0,0,2,1,0,0,4
-72,Puerto Rico,PR,1,0,0,1,0,0,0,0
-44,Rhode Island,RI,0,1,1,0,1,0,0,1
-45,South Carolina,SC,1,2,2,2,0,0,0,0
-46,South Dakota,SD,1,0,0,0,1,0,0,0
-47,Tennessee,TN,7,4,4,1,4,3,3,5
-48,Texas,TX,49,16,16,129,85,71,71,53
-78,United States Virgin Islands,VI,0,0,0,0,0,0,0,0
-49,Utah,UT,1,2,2,0,1,0,0,0
-50,Vermont,VT,0,0,0,2,0,0,0,2
-51,Virginia,VA,8,1,1,0,2,2,2,1
-53,Washington,WA,3,0,0,0,0,1,1,2
-54,West Virginia,WV,1,2,2,0,2,0,0,0
-55,Wisconsin,WI,2,2,2,2,3,1,1,3
-56,Wyoming,WY,3,1,1,0,2,0,0,0
+GEOID1,Alabama,AL,4,1,1,1,0,2,2,3
+GEOID2,Alaska,AK,0,0,0,0,0,0,0,0
+GEOID60,American Samoa,AS,0,0,0,0,0,0,0,0
+GEOID4,Arizona,AZ,3,2,2,4,2,0,0,2
+GEOID5,Arkansas,AR,1,0,0,1,0,1,1,4
+GEOID6,California,CA,21,14,14,13,13,10,10,31
+GEOID8,Colorado,CO,9,5,5,6,9,1,1,6
+GEOID69,Commonwealth of the Northern Mariana Islands,MP,0,0,0,0,0,0,0,0
+GEOID9,Connecticut,CT,1,2,2,0,1,3,3,2
+GEOID10,Delaware,DE,0,0,0,0,0,0,0,0
+GEOID11,District of Columbia,DC,1,2,2,1,2,2,2,0
+GEOID12,Florida,FL,7,16,16,11,6,2,2,27
+GEOID13,Georgia,GA,9,7,7,6,7,3,3,9
+GEOID66,Guam,GU,0,0,0,0,0,0,0,0
+GEOID15,Hawaii,HI,4,0,0,0,1,0,0,0
+GEOID16,Idaho,ID,1,1,1,1,1,0,0,1
+GEOID17,Illinois,IL,11,7,7,6,12,7,7,6
+GEOID18,Indiana,IN,2,2,2,0,2,3,3,1
+GEOID19,Iowa,IA,2,0,0,0,2,0,0,0
+GEOID20,Kansas,KS,3,1,1,3,2,0,0,3
+GEOID21,Kentucky,KY,0,0,0,0,0,0,0,0
+GEOID22,Louisiana,LA,9,4,4,7,8,1,1,11
+GEOID23,Maine,ME,0,1,1,0,0,0,0,1
+GEOID24,Maryland,MD,2,1,1,2,2,3,3,5
+GEOID25,Massachusetts,MA,4,1,1,0,2,2,2,1
+GEOID26,Michigan,MI,1,3,3,0,1,0,0,0
+GEOID27,Minnesota,MN,0,1,1,0,1,0,0,0
+GEOID28,Mississippi,MS,0,0,0,0,0,0,0,0
+GEOID29,Missouri,MO,0,3,3,1,3,1,1,2
+GEOID30,Montana,MT,1,0,0,0,0,0,0,0
+GEOID31,Nebraska,NE,1,2,2,0,1,1,1,1
+GEOID32,Nevada,NV,7,2,2,4,8,4,4,5
+GEOID33,New Hampshire,NH,0,0,0,0,0,0,0,0
+GEOID34,New Jersey,NJ,2,0,0,3,0,0,0,4
+GEOID35,New Mexico,NM,1,2,2,1,1,1,1,1
+GEOID36,New York,NY,10,16,16,12,12,5,5,25
+GEOID37,North Carolina,NC,2,1,1,1,0,0,0,0
+GEOID38,North Dakota,ND,0,0,0,0,0,0,0,0
+GEOID39,Ohio,OH,4,1,1,1,1,2,2,1
+GEOID40,Oklahoma,OK,3,3,3,4,2,0,0,5
+GEOID41,Oregon,OR,1,0,0,0,2,0,0,0
+GEOID42,Pennsylvania,PA,2,0,0,2,1,0,0,4
+GEOID72,Puerto Rico,PR,1,0,0,1,0,0,0,0
+GEOID44,Rhode Island,RI,0,1,1,0,1,0,0,1
+GEOID45,South Carolina,SC,1,2,2,2,0,0,0,0
+GEOID46,South Dakota,SD,1,0,0,0,1,0,0,0
+GEOID47,Tennessee,TN,7,4,4,1,4,3,3,5
+GEOID48,Texas,TX,49,16,16,129,85,71,71,53
+GEOID78,United States Virgin Islands,VI,0,0,0,0,0,0,0,0
+GEOID49,Utah,UT,1,2,2,0,1,0,0,0
+GEOID50,Vermont,VT,0,0,0,2,0,0,0,2
+GEOID51,Virginia,VA,8,1,1,0,2,2,2,1
+GEOID53,Washington,WA,3,0,0,0,0,1,1,2
+GEOID54,West Virginia,WV,1,2,2,0,2,0,0,0
+GEOID55,Wisconsin,WI,2,2,2,2,3,1,1,3
+GEOID56,Wyoming,WY,3,1,1,0,2,0,0,0
